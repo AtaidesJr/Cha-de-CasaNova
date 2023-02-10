@@ -363,7 +363,7 @@ figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 790px;
-    background-position: 300%;
+    background-position: 100%;
   }
 }
 
@@ -1358,14 +1358,14 @@ form label {
 }
 
 .fh5co-heading p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.8;
   color: #828282;
 }
 
 .fh5co-heading span {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 2px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.4);
@@ -2153,8 +2153,8 @@ body,
         }
     
         #qr-container {
-            width: 12em;
-            height: 12em;
+            width: 16em;
+            height: 16em;
             mix-blend-mode: normal;
             border-color: #F14E95;
         }
