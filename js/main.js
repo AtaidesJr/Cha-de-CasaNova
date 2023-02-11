@@ -33,7 +33,7 @@
 			.find('li')
 			.removeClass('has-dropdown');
 
-		// Hover dropdown menu on mobile
+		//  DROPDOWN MENU PARA MOBILE
 		$('.offcanvas-has-dropdown').mouseenter(function () {
 			var $this = $(this);
 
@@ -232,41 +232,41 @@
 }());
 
 var TEMPLATE_VERSION = '1.0.0';
-        var SERVICE_VERSION = '05cd0f65ac836327e5b0e988a1085afccbf16108b0a83cf8ab7b51017044401e';
-        function safeRun(f) {
-            try { f(); } catch (ex) { console.error(ex); }
-        }
-        safeRun(function renderQRCode() {
-            var code = document.getElementById('brcode').value;
-            new QRious({
-                element: document.getElementById('qr-container'),
-                value: code,
-                size: 500
-            });
+var SERVICE_VERSION = '05cd0f65ac836327e5b0e988a1085afccbf16108b0a83cf8ab7b51017044401e';
+function safeRun(f) {
+	try { f(); } catch (ex) { console.error(ex); }
+}
+safeRun(function renderQRCode() {
+	var code = document.getElementById('brcode').value;
+	new QRious({
+		element: document.getElementById('qr-container'),
+		value: code,
+		size: 500
+	});
 
-            new QRious({
-                element: document.getElementById('abTest_qrcode'),
-                value: code,
-                size: 500
-            });
-        });
-        new ClipboardJS('#copy-code');
-        var copyCodeElement = document.getElementById('copy-code');
-        copyCodeElement.addEventListener('click', function () {
-            copyCodeElement.classList.add('copied-icon');
-            copyCodeElement.innerHTML = 'Copiado';
-            setTimeout(function () {
-                copyCodeElement.classList.remove('copied-icon');
-                copyCodeElement.innerHTML = 'Copiar código do QR Code';
-            }, 1000);
-        });
-        new ClipboardJS('#copy-alias');
-        var copyAliasElement = document.getElementById('copy-alias');
-        copyAliasElement.addEventListener('click', function () {
-            var tooltipText = document.getElementById('tooltiptext');
-            tooltipText.classList.add('tooltiptext-copied');
-            setTimeout(function () {
-                tooltipText.classList.remove('tooltiptext-copied');
-            }, 1000);
-        });
+	new QRious({
+		element: document.getElementById('abTest_qrcode'),
+		value: code,
+		size: 500
+	});
+});
+new ClipboardJS('#copy-code');
+var copyCodeElement = document.getElementById('copy-code');
+copyCodeElement.addEventListener('click', function () {
+	copyCodeElement.classList.add('copied-icon');
+	copyCodeElement.innerHTML = 'Copiado';
+	setTimeout(function () {
+		copyCodeElement.classList.remove('copied-icon');
+		copyCodeElement.innerHTML = 'Copiar código do QR Code';
+	}, 1000);
+});
+new ClipboardJS('#copy-alias');
+var copyAliasElement = document.getElementById('copy-alias');
+copyAliasElement.addEventListener('click', function () {
+	var tooltipText = document.getElementById('tooltiptext');
+	tooltipText.classList.add('tooltiptext-copied');
+	setTimeout(function () {
+		tooltipText.classList.remove('tooltiptext-copied');
+	}, 1000);
+});
 
